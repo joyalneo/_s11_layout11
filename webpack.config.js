@@ -41,11 +41,7 @@ export default {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.css$/i,
@@ -70,6 +66,34 @@ export default {
           shareScope: 'default', // share scope with this name will be used
           singleton: true, // only a single version of the shared module is allowed
           version: '^17.0.2',
+        },
+        'react-dom': {
+          import: 'react-dom', // the "react" package will be used a provided and fallback module
+          shareKey: 'react-dom', // under this name the shared module will be placed in the share scope
+          shareScope: 'default', // share scope with this name will be used
+          version: '^17.0.2',
+          singleton: true,
+        },
+        'react-redux': {
+          import: 'react-redux', // the "react" package will be used a provided and fallback module
+          shareKey: 'react-redux', // under this name the shared module will be placed in the share scope
+          shareScope: 'default', // share scope with this name will be used
+          version: '^7.2.5',
+          singleton: true,
+        },
+        'react-router-dom': {
+          import: 'react-router-dom', // the "react" package will be used a provided and fallback module
+          shareKey: 'react-router-dom', // under this name the shared module will be placed in the share scope
+          shareScope: 'default', // share scope with this name will be used
+          singleton: true, // only a single version of the shared module is allowed
+          version: '^5.2.0',
+        },
+        'blox-js-sdk': {
+          import: 'blox-js-sdk',
+          shareKey: 'blox-js-sdk',
+          shareScope: 'default',
+          singleton: true,
+          version: '^1.0.0',
         },
       },
     }),
