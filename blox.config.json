@@ -1,0 +1,1 @@
+{"name":"layout","type":"ui-elements","source":{"https":"","ssh":"git@github.com:joyalneo/_ha_layout.git"},"language":"nodejs","start":"npx webpack-dev-server","build":"npm run build","postPull":"npm i"}
